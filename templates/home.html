@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+ 
+</head>
+
+
+
+<body style="background-color:rgb(225, 251, 255);">
+  <nav class=" cyan darken-3" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"> Rain Prediction </a>
+      <ul class="right hide-on-med-and-down ">
+        <li><a href="#"></a></li>
+      </ul>
+      
+      <audio autoplay>
+        <source src="static/محمد عبده _ رائعة _ انشودة المطر _ نسخة اصلية _ HQ - from YouTube.mp3" type="audio/mp3">
+      </audio>
+      
+    </div>
+  </nav>
+
+
+
+
+  <img src="static/imege.png" style="height: 300px; width: 300px; margin-left: 38%;  ">
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center cyan-text text-darken-1">Chance of Rain</h1>
+      <div class="row center">
+        <h5 class="header col s12 cyan-text text-darken">Predict the chance of Rain today
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12 ">
+      <div class="row ">
+        <div class="input-field col s4">
+            <label for="first_name"><b>Minimum Temperature</b></label>
+            <br>
+          <input placeholder="Temperature in Celsius" name="MinTemp" id="first_name" type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="last_name"><b>Maximum Temperature</b></label>
+            <br>
+          <input id="last_name" name="MaxTemp" placeholder="Temperature in Celsius"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="_name"><b>Humidity</b></label>
+            <br>
+          <input id="_name" name="Humidity9am" placeholder="Humidity %" type="text" class="validate">
+
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light cyan darken-3">Is it going to Rain?</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+        {{pred}}
+        <br>
+
+    </div>
+  </div>
+
+
+    
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="./static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <link rel="stylesheet" href={{url_for('static',filename='style01.css')}}>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    <title>Rainy Day</title>
+</head>
+<body style="background-color:rgb(225, 251, 255);">
+    <nav class=" cyan darken-3" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo"> Rain Prediction </a>
+          <ul class="right hide-on-med-and-down ">
+            <li><a href="#"></a></li>
+          </ul>
+          
+          
+        </div>
+      </nav>
+    <h1 class="header center cyan-text text-darken-1">TODAY WILL BE NOT A RAINY DAY!</h1>
+    <div class="row center">
+      <div class="row center">
+        <h5 class="header col s12 cyan-text text-darken">
+          <br>
+          {{pred}}
+          <br>
+        </h5>
+      </div>
+      
+        </h1>
+    <div class="sunnyimg">
+        <img src="static/FNR.jpg" style="height: 550px; width: 800px; margin-left: 0%">
+    </div>
+    <div style="text-align: center;">
+      <a href="{{ url_for('main') }}" style="color: #00008B; text-decoration: underline;">Go back to the main page</a>
+    </div>
+</body>
+</html>
